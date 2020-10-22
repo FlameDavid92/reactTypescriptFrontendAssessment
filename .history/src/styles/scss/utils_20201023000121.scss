@@ -1,0 +1,19 @@
+$app-padding-top: 30px;
+$app-padding-x: 15px;
+$full-width: calc(100% - 15px);
+
+@font-face {
+    font-family: 'Carlito-Regular';
+    src: local('Carlito-Regular'), url(../fonts/Carlito-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato-Black';
+    src: local('Lato-Black'), url(../fonts/Lato-Black.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato-Light';
+    src: local('Lato-Light'), url(../fonts/Lato-Black.ttf) format('truetype');
+}
+

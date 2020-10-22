@@ -1,0 +1,12 @@
+@import "../../styles/scss/colors.scss";
+@import "../../styles/scss/utils.scss";
+
+div.product{
+    border: 1px solid $app-lightgrey;
+    border-radius: 2px;
+}
+
+.productTitle{
+    font-family: Lato-Black;
+    font-size: 24px;
+}

@@ -1,44 +1,46 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Frontend Assessment
 
-## Available Scripts
+This assessment is designed to evaluate the technical and organizational skills of a candidate
 
-In the project directory, you can run:
+## Preview
 
-### `npm start`
+<img src="./screen.png" style="max-width:600px;"/>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## The exercise
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Create a clone of [this](https://codyhouse.co/demo/product-builder/index.html) project as close as you are capable of.
 
-### `npm test`
+### FAQ
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Q: Should I use a specific technology or framework?
+A: No, the technology choices are completely open
 
-### `npm run build`
+Q: Do I need to build an API?
+A: No, everything client-side is enough
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Q: The design should be responsive?
+A: Yes
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Bonus point (optional)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Use TypeScript
+- end-to-end test using [Cypress](https://www.cypress.io/) or equivalent tool
 
-### `npm run eject`
+## Why this test
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This design is simple yet has some challenging logic, making in interesting but not something that required a lot of time to complete.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### What is being tested
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- reuse of components and logic
+- capacity to reverse engineer a live application, this is a valuable skill when dealing with legacy code
+- usage and knowledge of tooling and configuration
+- form and wizard logic
+- attention to details and quality when working and making tech choices autonomously
+- use of global shared state across multiple UI elements
+- care of details in copying a design
+- small animations
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Time requirements
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+This assessment is meant to test how a candidate works in a work-like day-to-day situation, a tight deadline (days) is highly discouraged.
