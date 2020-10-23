@@ -39,21 +39,21 @@ const Summary: FC = () => {
           </thead>
           <tbody>
             <tr>
-              <th scope="row myLabel">Model</th>
-              <td className="myLabelSm">{selectedProduct.name}</td>
-              <td className="myLabelSm">{selectedProduct && selectedProduct.startingPrice.currency + printPrice(selectedProduct.startingPrice.value)}</td>
+              <th scope="row">Model</th>
+              <td className="tdLabel">{selectedProduct.name}</td>
+              <td className="tdLabel">{selectedProduct && selectedProduct.startingPrice.currency + printPrice(selectedProduct.startingPrice.value)}</td>
             </tr>
             <tr>
               <th scope="row">Color</th>
-              <td className="myLabelSm">{selectedProduct.colors[selectedColor].color}</td>
-              <td className="myLabelSm">{selectedProduct && selectedProduct.colors[selectedColor].price.currency + printPrice(selectedProduct.colors[selectedColor].price.value)}</td>
+              <td className="tdLabel">{selectedProduct.colors[selectedColor].color}</td>
+              <td className="tdLabel">{selectedProduct && selectedProduct.colors[selectedColor].price.currency + printPrice(selectedProduct.colors[selectedColor].price.value)}</td>
             </tr>
             {selectedProduct.accessories.filter((a, ind) => selectedAccessories[ind]).map(acc => {
               return (
                 <tr>
                   <th scope="row">Accesory</th>
-                  <td className="myLabelSm">{acc.name}</td>
-                  <td className="myLabelSm">{acc.price.currency + printPrice(acc.price.value)}</td>
+                  <td className="tdLabel">{acc.name}</td>
+                  <td className="tdLabel">{acc.price.currency + printPrice(acc.price.value)}</td>
                 </tr>
               )
             })}

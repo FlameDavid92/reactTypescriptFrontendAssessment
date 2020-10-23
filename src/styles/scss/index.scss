@@ -37,7 +37,6 @@ input[type='radio'] {
 
 .myContainer {
   width: 100%;
-  height: calc(100vh - $app-padding-top);
   padding-right: $app-padding-x;
   padding-left: $app-padding-x;
   margin-right: auto;
@@ -59,6 +58,12 @@ input[type='radio'] {
 .myLabelSm {
   font-family: Lato-Light;
   font-size: 14px;
+  color: $app-greyblue;
+}
+
+.tdLabel{
+  font-family: Lato-Light;
+  font-size: 1rem;
   color: $app-greyblue;
 }
 
