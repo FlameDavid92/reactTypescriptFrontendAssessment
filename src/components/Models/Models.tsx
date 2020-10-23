@@ -5,6 +5,8 @@ import { printPrice } from '../../utils/price';
 import { Price } from '../../model/interfaces';
 import scss from './models.module.scss';
 
+import {sync} from '../../utils/localTotalSync';
+
 const Models: FC = () => {
   const products = useContext(ProductsContext);
   const totalObj = useContext(TotalContext);
@@ -17,15 +19,18 @@ const Models: FC = () => {
       if(sel){
         let parsed = JSON.parse(sel);
         setSelected(parsed.id);
-        totalObj?.setTotal(parsed.total);
-        setFirstRender(false);
       }
+      sync(totalObj);
+      setFirstRender(false);
     }
   }, [totalObj,firstRender]);
 
   const handleProductChange = (startingPrice: Price, id:number) => {
+    localStorage.removeItem("color");
+    localStorage.removeItem("accessories");
     totalObj?.setTotal(startingPrice);
     localStorage.setItem("models", JSON.stringify({id : id, total: startingPrice}));
+    localStorage.setItem("startingPrice", JSON.stringify(startingPrice));
     setSelected(id);
   }
 

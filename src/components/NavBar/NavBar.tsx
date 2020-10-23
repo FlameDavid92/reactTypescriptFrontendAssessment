@@ -3,6 +3,8 @@ import { Section } from '../../model/interfaces';
 import scss from './navbar.module.scss';
 import cn from 'classnames';
 
+import {check} from '../../utils/checkModelSelection';
+
 type NavBarProps = {
     sections: Array<Section>,
     currentSectionId: number,
@@ -18,7 +20,8 @@ const NavBar: FC<NavBarProps> = ({sections, currentSectionId,setCurrentSectionId
         return className;
     }
     const onLinkNavBarClick = (id:number) => {
-        setCurrentSectionId(id);
+        if(check()) setCurrentSectionId(id);
+        else alert("Seleziona un prodotto!");
     }
 
     return (

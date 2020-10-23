@@ -6,6 +6,8 @@ import { printPrice } from '../../utils/price';
 import cn from 'classnames';
 import scss from './footer.module.scss';
 
+import {check} from '../../utils/checkModelSelection';
+
 type FooterProps = {
   total: Price,
   limit: number,
@@ -16,7 +18,8 @@ type FooterProps = {
 export default function Footer({ total, limit, currentSectionId, setCurrentSectionId, nextSectionString }: FooterProps) {
   const onBtnFooterClick = () => {
     if (currentSectionId+1 < limit) {
-      setCurrentSectionId(n=>n+1);
+      if(check()) setCurrentSectionId(n=>n+1);
+      else alert("Seleziona un prodotto!");
     } else alert("Under development!");
   }
   return (

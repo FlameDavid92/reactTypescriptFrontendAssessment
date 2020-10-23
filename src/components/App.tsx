@@ -12,11 +12,7 @@ import sections from '../data/sections';
 import { Price } from '../model/interfaces';
 
 function App() {
-  console.log("App rendered");
   const [currentSectionId, setCurrentSectionId] = useState(0);
-  /*const [nextSection, setNextSection] = useState(1);
-  const [navBarClick, setNavBarClick] = useState(0);
-  const [btnFooterClick, setBtnFooterClick] = useState(0);*/
   const [total, setTotal] = useState<Price>({ value: 0, currency: "$" });
 
   const renderSection = () => {
@@ -51,7 +47,7 @@ function App() {
             <ProductsContext.Provider value={{ data: [BMW_i3, BMW_i8] }}>
               <TotalContext.Provider value={{ total: total, setTotal: setTotal }}>
                 <form>
-                  <Suspense fallback={<>No component</>}>
+                  <Suspense fallback={<img src="./images/loader.svg" alt="loader"/>}>
                     {renderSection()}
                   </Suspense>
                 </form>

@@ -8,15 +8,15 @@ export const BMW_i3 : Auto =
 	name: "BMW i3",
 	startingPrice : {value:42400,currency:"$"},
     colors: [
-        {color:"energy white", price: {value:0,currency:"$"}},
-        {color:"classic blue", price: {value:2500,currency:"$"}},
-        {color:"living coral", price:{value:5000,currency:"$"}}
+        {color:"Energy White", price: {value:0,currency:"$"}},
+        {color:"Classic Blue", price: {value:2500,currency:"$"}},
+        {color:"Living Coral", price:{value:5000,currency:"$"}}
         ],
     images: ["./images/bmw_i3-white-min.png","./images/bmw_i3-classic-blue-min.png","./images/bmw_i3-living-coral-min.png"],
     accessories: [
-        { name:"Park Distance Control (PDC)", price: { value:420,currency:"$"} },
-        { name:"Heated front seats", price: { value:400,currency:"$"} },
-        { name:"Anti-theft with acoustic alarm", price: { value:650,currency:"$"} }
+        { name:"Park Distance Control (PDC)", image:"./images/pdc-min.png", price: { value:420,currency:"$"} },
+        { name:"Heated front seats", image:"./images/hfs-min.png", price: { value:400,currency:"$"} },
+        { name:"Anti-theft with acoustic alarm", image:"./images/atwaa-min.png", price: { value:650,currency:"$"} }
 		]
 }
 export const BMW_i8 : Auto =
@@ -25,14 +25,14 @@ export const BMW_i8 : Auto =
 	name: "BMW i8",
     startingPrice : {value:140700,currency:"$"},
     colors: [
-        {color:"frozen black", price: {value:0,currency:"$"}},
-        {color:"imperial blue", price: {value:6000,currency:"$"}}
+        {color:"Frozen Black", price: {value:0,currency:"$"}},
+        {color:"Imperial Blue", price: {value:6000,currency:"$"}}
         ],
     images: ["./images/bmw_i8-frozen-black-min.png","./images/bmw_i8-imperial-blue-min.png"],
 	accessories: [
-        { name:"Harman Kardon Speaker System", price: { value:950,currency:"$"} },
-        { name:"Park Distance Control (PDC)", price: { value:420,currency:"$"} },
-        { name:"Heated front seats", price: { value:400,currency:"$"} },
-        { name:"Anti-theft with acoustic alarm", price: { value:650,currency:"$"} }
+        { name:"Harman Kardon Speaker System", image:"./images/hkss-min.png", price: { value:950,currency:"$"} },
+        { name:"Park Distance Control (PDC)", image:"./images/pdc-min.png", price: { value:420,currency:"$"} },
+        { name:"Heated front seats", image:"./images/hfs-min.png", price: { value:400,currency:"$"} },
+        { name:"Anti-theft with acoustic alarm", image:"./images/atwaa-min.png", price: { value:650,currency:"$"} }
         ]
 }

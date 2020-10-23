@@ -16,6 +16,7 @@ export interface PricedColor{
 
 export interface Accessory {
 	name : string,
+	image: string,
 	price : Price
 }
 

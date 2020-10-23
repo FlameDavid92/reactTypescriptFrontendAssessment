@@ -2,7 +2,9 @@ import React, { FC, useState, useEffect, useContext } from "react";
 import { ProductsContext } from "../../contexts/productsContext";
 import { TotalContext } from "../../contexts/totalContext";
 import { Auto, Price } from '../../model/interfaces';
-import {printPrice} from '../../utils/price';
+import { printPrice } from '../../utils/price';
+
+import {sync} from '../../utils/localTotalSync';
 
 const Colors: FC = () => {
   const products = useContext(ProductsContext);
@@ -10,7 +12,6 @@ const Colors: FC = () => {
   const [selectedColor, setSelectedColor] = useState<number>(0);
   const [selectedProduct, setselectedProduct] = useState<Auto | null>(null);
   const [firstRender, setFirstRender] = useState(true);
-  const [localTotal, setLocalTotal] = useState(0);
 
   useEffect(() => {
     if (firstRender) {
@@ -19,15 +20,19 @@ const Colors: FC = () => {
         let parsed = JSON.parse(sel);
         products && setselectedProduct(products.data.filter(pr => { return pr.id === parsed.id })[0])
       }
+      let col = localStorage.getItem("color");
+      if (col) {
+        setSelectedColor(JSON.parse(col));
+      }
       setFirstRender(false);
     }
-  }, [products, firstRender]);
-
+  }, [products, firstRender, totalObj]);
 
   const handleColorChange = (ind: number, price: Price) => {
     setSelectedColor(ind);
-    totalObj?.setTotal(t => { return { ...t, value: (t.value - localTotal) + price.value } });
-    setLocalTotal(price.value);
+    localStorage.setItem("color", JSON.stringify(ind));
+    localStorage.setItem("colorTotal", JSON.stringify(price));
+    sync(totalObj);
   };
 
   return (

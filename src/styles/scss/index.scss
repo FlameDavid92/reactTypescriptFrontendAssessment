@@ -56,6 +56,12 @@ input[type='radio'] {
   color: $app-greyblue;
 }
 
+.myLabelSm {
+  font-family: Lato-Light;
+  font-size: 14px;
+  color: $app-greyblue;
+}
+
 @media screen and (max-width: 575px) {
   .appTitle{
     font-size: 30px;
@@ -68,6 +74,9 @@ input[type='radio'] {
     margin-bottom: 100px;
   }
   .myLabel {
+    font-size: medium;
+  }
+  .myLabelSm{
     font-size: medium;
   }
 }
