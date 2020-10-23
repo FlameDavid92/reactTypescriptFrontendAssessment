@@ -27,7 +27,9 @@ const Models: FC = () => {
 
   const handleProductChange = (startingPrice: Price, id:number) => {
     localStorage.removeItem("color");
+    localStorage.removeItem("colorTotal");
     localStorage.removeItem("accessories");
+    localStorage.removeItem("accessoriesTotal");
     totalObj?.setTotal(startingPrice);
     localStorage.setItem("models", JSON.stringify({id : id, total: startingPrice}));
     localStorage.setItem("startingPrice", JSON.stringify(startingPrice));
