@@ -34,8 +34,8 @@ export default function Footer({ total, limit, currentSectionId, setCurrentSecti
         <div className="col-6 col-lg-2">
           <button className={scss.myButton} onClick={() => onBtnFooterClick()}>
             <div className="row">
-              <div className="col">{nextSectionString}</div>
-              <div className="col"><FontAwesomeIcon icon={faAngleRight} /></div>
+              <div className="col-8">{nextSectionString}</div>
+              <div className="col-2"><FontAwesomeIcon icon={faAngleRight} /></div>
             </div>
           </button>
         </div>
